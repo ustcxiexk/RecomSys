@@ -75,4 +75,26 @@ if __name__ == "__main__":
     print (q)
     print (result)
     np.save('error.npy',loss)
+    
+    
+    
+    
+'''
+Date:20180306
+@author: xiexk
+'''
+
+from pylab import *
+import numpy as np
+
+data = np.load('error.npy')
+# data = data[0:20000]
+
+n = len(data)
+x = range(n)
+plot(x, data, color='r',linewidth=1)
+plt.title('Convergence curve')
+plt.xlabel('generation')
+plt.ylabel('loss')
+show()
    
